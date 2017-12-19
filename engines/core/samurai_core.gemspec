@@ -17,6 +17,9 @@ Gem::Specification.new do |s|
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
 
   s.add_dependency "rails", "~> 5.1.4"
-
+  s.add_dependency "sass-rails", "~> 5.0", ">= 5.0.7"
+  s.add_dependency "jquery-rails", "~> 4.3", ">= 4.3.1"
+  s.add_dependency "bootstrap-sass", "~> 3.3", ">= 3.3.7"
+  s.add_dependency "autoprefixer-rails", "~> 7.2", ">= 7.2.3"
   s.add_development_dependency "sqlite3"
 end
