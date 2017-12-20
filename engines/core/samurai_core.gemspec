@@ -28,4 +28,5 @@ Gem::Specification.new do |s|
   s.add_development_dependency "factory_bot_rails", "~> 4.8", ">= 4.8.2"
   s.add_development_dependency "faker", "~> 1.8", ">= 1.8.5"
   s.add_development_dependency "database_cleaner", "~> 1.6", ">= 1.6.2"
+  s.add_development_dependency "rails-controller-testing", "~> 1.0", ">= 1.0.2"
 end
