@@ -24,4 +24,8 @@ Gem::Specification.new do |s|
   s.add_dependency "devise", "~> 4.2"
   s.add_dependency "cancancan" , "~> 2.1", ">= 2.1.2"
   s.add_development_dependency "sqlite3"
+  s.add_development_dependency "rspec-rails", "~> 3.7", ">= 3.7.2"
+  s.add_development_dependency "factory_bot_rails", "~> 4.8", ">= 4.8.2"
+  s.add_development_dependency "faker", "~> 1.8", ">= 1.8.5"
+  s.add_development_dependency "database_cleaner", "~> 1.6", ">= 1.6.2"
 end
