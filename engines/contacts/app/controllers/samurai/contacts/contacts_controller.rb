@@ -1,7 +1,7 @@
 require_dependency "samurai/application_controller"
 
 module Samurai::Contacts
-  class ContactsController < ApplicationController
+  class ContactsController < Samurai::ApplicationController
     before_action :set_contact, only: [:show, :edit, :update, :destroy]
 
     # GET /contacts
@@ -26,7 +26,6 @@ module Samurai::Contacts
     def create
       @contact = Contact.new(contact_params)
       @contact.user = current_user
-
       if @contact.save
         redirect_to [samurai, @contact], notice: 'Contact was successfully created.'
       else
