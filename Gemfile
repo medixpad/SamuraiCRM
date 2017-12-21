@@ -51,6 +51,7 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'deface', '~> 1.3'
+gem 'faker', '~> 1.8', '>= 1.8.6'
 
 gem 'samurai_core', path: 'engines/core'
 gem 'samurai_contacts', path: 'engines/contacts'
