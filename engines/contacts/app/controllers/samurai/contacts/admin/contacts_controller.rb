@@ -3,7 +3,7 @@ module Samurai
     module Admin
       class ContactsController < Samurai::Admin::AdminController 
         def index
-          @contacts = Samurai::Contacts::Contact.all
+          @contacts = Contact.all
         end
       end
     end
