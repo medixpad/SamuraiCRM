@@ -55,3 +55,4 @@ gem 'faker', '~> 1.8', '>= 1.8.6'
 
 gem 'samurai_core', path: 'engines/core'
 gem 'samurai_contacts', path: 'engines/contacts'
+gem 'samurai_tasks', path: 'engines/tasks'

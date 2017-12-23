@@ -18,6 +18,14 @@ PATH
       rails (~> 5.1.4)
       sass-rails (~> 5.0, >= 5.0.7)
 
+PATH
+  remote: engines/tasks
+  specs:
+    samurai_tasks (0.0.1)
+      deface (~> 1.3)
+      rails (~> 5.1.4)
+      samurai_core
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -219,6 +227,7 @@ DEPENDENCIES
   rails (~> 5.1.4)
   samurai_contacts!
   samurai_core!
+  samurai_tasks!
   sass-rails (~> 5.0)
   spring
   spring-watcher-listen (~> 2.0.0)
