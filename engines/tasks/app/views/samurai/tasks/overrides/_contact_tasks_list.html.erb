@@ -1,31 +1,22 @@
-<%= link_to 'New Task', samurai.new_task_path, class: 'pull-right btn btn-primary' %>
-<h2>Listing Task</h2>
 <hr>
-
 <div class="panel panel-primary">
   <div class="panel-heading">
-    My Tasks
+    Tasks for this contact
   </div>
   <table class="table">
     <thead>
       <th>ID</th>
       <th>Title</th>
       <th>Content</th>
-      <% if Samurai::Core.available?(:contacts) %>
-        <th>Contact</th>
-      <% end %>
-      <th>Created At</th>
+      <th>Created On</th>
       <th></th>
     </thead>
     <tbody>
-      <% @tasks.each do |task| %>
+      <% @contact.tasks.each do |task| %>
         <tr>
           <td><%= task.id %></td>
           <td><%= task.title %></td>
           <td><%= task.content %></td>
-          <% if Samurai::Core.available?(:contacts) %>
-            <td><%=  check_contact(task) %></td>
-          <% end %>
           <td><%= task.created_at.strftime("%d %b. %Y") %></td>
           <td>
             <%= link_to 'Show', [samurai, task], class: 'btn btn-primary' %>
@@ -37,4 +28,3 @@
     </tbody>
   </table>
 </div>
-<br>

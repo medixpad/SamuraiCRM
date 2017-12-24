@@ -11,6 +11,11 @@
     <strong>User:</strong>
     <%= @task.user.email %>
     <br/>
+    <% if Samurai::Core.available?(:contacts) %>
+      <strong>Contact:</strong>
+      <%= @task.contact.email %>
+      <br/>
+    <% end %>
   </div>
 </div>
 <hr>
