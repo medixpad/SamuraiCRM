@@ -11,7 +11,7 @@
         <th>Created On</th>
       </thead>
       <tbody>
-      <% current_user.tasks.last(3).each do |task| %>
+      <% @tasks.last(3).each do |task| %>
         <tr>
           <td><%= task.id %></td>
           <td><%= task.title %></td>
