@@ -12,7 +12,7 @@
         <th>Created On</th>
       </thead>
       <tbody>
-        <% @contacts.each do |contact| %>
+        <% @contacts.last(3).each do |contact| %>
           <tr>
             <td><%= contact.id %></td>
             <td><%= contact.first_name %> <%= contact.last_name %></td>
