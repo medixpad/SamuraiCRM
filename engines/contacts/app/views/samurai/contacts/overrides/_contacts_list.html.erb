@@ -12,7 +12,7 @@
         <th>Created On</th>
       </thead>
       <tbody>
-        <% @contacts.last(3).each do |contact| %>
+        <% @contacts.each do |contact| %>
           <tr>
             <td><%= contact.id %></td>
             <td><%= contact.first_name %> <%= contact.last_name %></td>
@@ -24,7 +24,7 @@
     </table>
     
     <div class="panel-body text-center">
-      <%= link_to '...', contacts_path %>
+      <%= link_to '...', samurai.contacts_path %>
     </div>
   </div>
 </div>

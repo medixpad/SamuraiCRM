@@ -1,0 +1,29 @@
+<h2 class='pull-left'>Tasks</h2>
+  <%= render 'admin/shared/nav' %>
+<hr>
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    All Tasks
+  </div>
+  
+  <table class="table">
+    <thead>
+      <th>ID</th>
+      <th>Title</th>
+      <th>Content</th>
+      <th>Associated User</th>
+      <th>Associated Contact</th>
+    </thead>
+    <tbody>
+      <% @tasks.each do |task| %>
+        <tr>
+          <td><%= task.id %></td>
+          <td><%= task.title %></td>
+          <td><%= truncate(task.content)%></td>
+          <td><%= task.user.email %></td>
+          <td><%= task.contact.email %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

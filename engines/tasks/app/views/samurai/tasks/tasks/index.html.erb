@@ -22,7 +22,7 @@
         <tr>
           <td><%= task.id %></td>
           <td><%= task.title %></td>
-          <td><%= task.content %></td>
+          <td><%= truncate(task.content) %></td>
           <% if Samurai::Core.available?(:contacts) %>
             <td><%=  check_contact(task) %></td>
           <% end %>
