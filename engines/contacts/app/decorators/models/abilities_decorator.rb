@@ -13,7 +13,6 @@ module Samurai
     end
   end
 end
-
 # Registers the defined abilities.
 Samurai::Ability.register_ability(Samurai::Contacts::AbilityDecorator)
 

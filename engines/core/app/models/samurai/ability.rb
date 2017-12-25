@@ -14,17 +14,18 @@ module Samurai
     end
 
     def initialize(user)
-      Rails.logger.info self.abilities.inspect
+  #    Rails.logger.info self.abilities.inspect
       if user.admin?
         can :manage, :all
       else
         can :read, :dashboard
       end
-      
+       
       Ability.abilities.each do |klass|
         ability = klass.send(:new, user)
         merge(ability)
-      #  @rules = rules + ability.send(:rules)
+        # byebug
+        # @rules = rules + ability.send(:rules)
       end
     end
   end

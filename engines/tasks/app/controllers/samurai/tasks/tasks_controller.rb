@@ -2,11 +2,12 @@ require_dependency "samurai/tasks/application_controller"
 
 module Samurai::Tasks
   class TasksController < ApplicationController
+    load_and_authorize_resource class: Samurai::Tasks::Task
     before_action :set_task, only: [:show, :edit, :update, :destroy]
 
     # GET /tasks
     def index
-      @tasks = Task.all
+      @tasks = current_user.tasks
     end
 
     # GET /tasks/1
